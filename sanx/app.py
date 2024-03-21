@@ -5,6 +5,7 @@ from sanx.web import logo_img, logo_style, login
 
 app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+
 app.layout = html.Div(
     [
         html.A(html.Img(src=logo_img, style=logo_style, id="home_logo"), href="/"),
@@ -13,9 +14,20 @@ app.layout = html.Div(
             children=html.Div(["Logged In as Santo"], id="loginfo-container-top-right"),
             style=login.login_info_style,
         ),
-        dash.page_container,
         # Hidden store to capture keydown events
         dcc.Store(id="keydown-store", data={"key": None}),
+        dbc.Container(
+            dash.page_container,
+            fluid=False,
+            className="py-3",
+            style={
+                "margin-top": "2em",
+                # "margin-left": "8em",
+                # "margin-right": "8em",
+                "margin-bottom": "8em",
+                "width": "auto",
+            },
+        ),
         login.login_overlay_interface,
         html.Footer(
             "Copyright © 2023 Your Company",

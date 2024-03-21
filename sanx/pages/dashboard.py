@@ -62,7 +62,7 @@ layout = dbc.Container(
                     [
                         dcc.Graph(figure=fig),
                     ],
-                    width=6,
+                    width=12,
                 ),
                 dbc.Col(
                     [

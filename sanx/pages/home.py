@@ -30,7 +30,7 @@ def get_card(title="Card title", link="", img="", desc=""):
                 ]
             ),
         ],
-        style={"width": "30rem"},
+        # style={"width": "30rem"},
     )
 
 
@@ -44,7 +44,7 @@ layout = dbc.Container(
                             "Application Tracker",
                             style={
                                 "textAlign": "center",
-                                "line-height": "3.0em",
+                                "line-height": "2.0em",
                                 # "padding-top": "2.0em",
                             },
                         )
@@ -91,11 +91,11 @@ layout = dbc.Container(
                     width=4,
                 ),
             ],
-            style={
-                # "padding-top": "100px",
-                "padding-left": "80px",
-                "padding-right": "80px",
-            },
+            # style={
+            #     # "padding-top": "100px",
+            #     "padding-left": "80px",
+            #     "padding-right": "80px",
+            # },
         ),
     ]
 )
